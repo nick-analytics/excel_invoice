@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Report Style</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="doc-header">
+    <div class="eyebrow">Excel — Workbook Project</div>
+    <h1>Dynamic Labour<br>Cost Calculator</h1>
+    <p>An automated invoicing workbook built to handle multi-site, multi-state labour cost calculations with dynamic public holiday detection and rate application.</p>
+  </div>
+
+  <div class="section-label">Workbook Preview — Site Calculation Table</div>
+
+  <div class="sheet-wrapper">
+    <div class="sheet-top">
+      <div>
+        <div class="st-title">Company Name — Site 1</div>
+      </div>
+      <div class="st-sub">Pay Period: Jan 2026</div>
+    </div>
+    <div class="sheet-banner">Premier Operations — Epping — State: VIC</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Mon 29/12</th>
+          <th>Tue 30/12</th>
+          <th>Wed 31/12</th>
+          <th class="ph">Thu 1/1 </th>
+          <th>Fri 2/1</th>
+          <th class="sat">Sat 3/1</th>
+          <th class="sun">Sun 4/1</th>
+          <th>Total Hrs</th>
+          <th>Total $</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Employee 1</td>
+          <td>8</td><td></td><td></td><td class="ph">8</td><td></td><td class="sat"></td><td class="sun">8</td>
+          <td>24</td><td>$1,320</td>
+        </tr>
+        <tr>
+          <td>Employee 2</td>
+          <td></td><td>8</td><td>8</td><td class="ph"></td><td>8</td><td class="sat">8</td><td class="sun"></td>
+          <td>32</td><td>$1,860</td>
+        </tr>
+        <tr>
+          <td>Employee 3</td>
+          <td>8</td><td>8</td><td></td><td class="ph"></td><td>8</td><td class="sat"></td><td class="sun"></td>
+          <td>24</td><td>$1,320</td>
+        </tr>
+        <tr>
+          <td>Employee 4</td>
+          <td></td><td></td><td>8</td><td class="ph">8</td><td></td><td class="sat">8</td><td class="sun">8</td>
+          <td>32</td><td>$2,200</td>
+        </tr>
+        <tr>
+          <td>Site Totals</td>
+          <td>16</td><td>16</td><td>16</td><td class="ph">16</td><td>16</td><td class="sat">16</td><td class="sun">16</td>
+          <td>112</td><td>$6,700</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="notes-row">
+      <div class="note-cell"><div class="n-label">★ Public Holiday</div><div class="n-val">Auto-detected by State</div></div>
+      <div class="note-cell"><div class="n-label">Rates Applied</div><div class="n-val">Dynamic — Configurable</div></div>
+      <div class="note-cell"><div class="n-label">Formula Type</div><div class="n-val">Structured References</div></div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="settings-block">
+      <div class="sb-header">Site Configuration</div>
+      <div class="sb-row"><span class="sb-key">State</span><span class="sb-val">VIC</span></div>
+      <div class="sb-row"><span class="sb-key">Standard Rate</span><span class="sb-val">$55.00 / hr</span></div>
+      <div class="sb-row"><span class="sb-key">Saturday Rate</span><span class="sb-val">$68.00 / hr</span></div>
+      <div class="sb-row"><span class="sb-key">Sunday Rate</span><span class="sb-val">$75.00 / hr</span></div>
+      <div class="sb-row"><span class="sb-key">Public Holiday Rate</span><span class="sb-val">$110.00 / hr</span></div>
+      <div class="sb-row"><span class="sb-key">Pay Period</span><span class="sb-val">Fortnightly</span></div>
+    </div>
+    <div class="legend-block">
+      <div class="lb-header">Colour Legend</div>
+      <div class="lb-row"><div class="lb-swatch" style="background:rgba(228,183,34,0.3); border-color: #e4b722"></div> Public Holiday Rate</div>
+      <div class="lb-row"><div class="lb-swatch" style="background:rgba(74,139,127,0.25); border-color: #4a8b7f"></div> Saturday Rate</div>
+      <div class="lb-row"><div class="lb-swatch" style="background:rgba(192,98,47,0.2); border-color: #c0622f"></div> Sunday Rate</div>
+      <div class="lb-row"><div class="lb-swatch" style="background:white"></div> Standard Rate</div>
+    </div>
+  </div>
+
+  <div class="section-label">Pay Period Summary</div>
+
+  <div class="summary-strip">
+    <div class="strip-item"><div class="si-label">Standard Hrs</div><div class="si-value">248</div></div>
+    <div class="strip-item"><div class="si-label">Saturday Hrs</div><div class="si-value">24</div></div>
+    <div class="strip-item"><div class="si-label">Sunday Hrs</div><div class="si-value">16</div></div>
+    <div class="strip-item"><div class="si-label">Public Holiday</div><div class="si-value">24</div></div>
+    <div class="strip-item"><div class="si-label">Total Invoice</div><div class="si-value">$20,040</div></div>
+  </div>
+
+</div>
+</body>
+</html>
